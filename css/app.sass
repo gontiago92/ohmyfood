@@ -1,7 +1,111 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
 
+// Variables
+$monserrat: 'Monserrat', sans-serif
+$green: #579C87
+$textcolor: #FDCB46
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+
+img
+    width: 100%
+    height: auto
+
+body
+    display: flex
+    flex-direction: column
+    height: 100vh
+    font:
+        family: $monserrat
+        size: 20px
+    
+header
+    margin: 0
+    padding: 20px
+    height: 100px
+    background: $green
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $textcolor
+    .logo
+        font:
+            size: 50px
+            weight: 600
+
+.container
+    margin: 0 auto
+    padding: 20px
+    max-width: 1200px
+    height: calc(100% - 160px)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    overflow: auto
+    .row
+        display: flex
+        width: 100%
+        [class*="menu-"]
+            margin: 10px
+            padding: 0
+            width: 100%
+            max-width: 250px
+            transform: translate(0, 0)
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, .6)
+            transition: all 400ms ease
+            &:hover
+                box-shadow: 10px -10px 0 0px rgba(0, 0, 0, .6)
+                transform: translate(-10px, 10px)
+                //animation: threeD 1s infinite
+                
+            img
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, .20)
+
+
+
+.menus
+    article
+        display: none
+
+
+footer
+    margin: 0
+    padding: 20px
+    height: 60px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: $green
+    a
+        font-weight: 500
+        text-decoration: none
+        color: $textcolor
+
+    
+@keyframes threeD
+    0%
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 1)
+
+    50%
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 1)
+
+
+    100%
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 1)
+
+        
+
+@keyframes bounce
+    0%
+        transform: scale(1)
+
+    50%
+        transform: scale(1.2)
+
+    100%
+        transform: scale(1)
+        
