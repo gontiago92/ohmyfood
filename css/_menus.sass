@@ -1,0 +1,176 @@
+.menu
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1)
+    h2
+        margin: 20px 0
+        text-align: center
+
+    [class*="menu-"]
+        margin: 0
+        padding: 40px
+
+        section
+            margin: 40px 0
+        .sectionTitle
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .title
+                margin: 0 60px
+            .headline
+                margin: 0
+                padding: 0
+                width: 50%
+                height: 4px
+                border-radius: 4px
+                background: #000
+                &:first-child
+                    margin-right: 0
+                &:last-child
+                    margin-left: 0
+
+            div.title
+                width: 100%
+                text-align: center
+                h3
+                    margin: 0
+                    padding-bottom: 4px
+                    display: inline-block
+                    position: relative
+                    overflow: hidden
+                    &::before
+                        content: ''
+                        display: block
+                        position: absolute
+                        bottom: 1px
+                        width: 0
+                        height: 2px
+                        background: #000
+                        //transform: translateX(0)
+                        //transition: width 400ms ease
+                    &:hover
+                        &::before
+                            //width: 100%
+                            animation: headline 2s infinite
+
+                
+        p
+            padding: 10px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-style: italic
+
+
+    .menu-1
+        background: #FCDFDB
+        .note
+            i
+                display: block
+        i
+            background: linear-gradient(30deg,#F04E5F 0%,#F6916A 70%)
+            font:
+                size: 100px
+            color: transparent
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            -moz-background-clip: text
+            -moz-text-fill-color: transparent
+        .bottomtitle
+            text-align: center
+            i
+                margin-right: 20px
+                vertical-align: middle
+                font:
+                    size: 50px
+
+    .menu-2
+        background: #FFF5FE
+        h2
+            font:
+                size: 50px
+            background-image: linear-gradient(45deg, #8F5BFE, #E38913)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            -moz-background-clip: text
+            -moz-text-fill-color: transparent
+        #seMettreEnAppetit
+            color: #E38913
+            .headline
+                background: #E38913
+        #plaisirPapilles
+            color: #A56799
+            .headline
+                background: #A56799
+        #gourmandisesSucrees
+            color: #8F5BFE
+            .headline
+                background: #8F5BFE
+        .sectionTitle
+            .headline
+                background: red
+
+
+    .menu-3
+        background: #F9F9F9
+        h2
+            font:
+                size: 50px
+                style: italic
+            background-image: linear-gradient(45deg, #001ED9, #0887FB)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            -moz-background-clip: text
+            -moz-text-fill-color: transparent
+
+        .sectionTitle
+            &:first-child      
+                .headline
+                    background: blue
+
+    .menu-4
+        background: #FDFFFD
+        h2
+            font:
+                size: 50px
+                style: italic
+                weight: 500
+            background-image: linear-gradient(45deg, #3D923A, #BCFD7E)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            -moz-background-clip: text
+            -moz-text-fill-color: transparent
+
+        .sectionTitle
+            .headline
+                &:first-child
+                    background-image: linear-gradient(45deg, #3D923A, #BCFD7E)
+                &:last-child
+                    background-image: linear-gradient(-45deg, #3D923A, #BCFD7E)
+
+
+@keyframes headline
+    0%
+        width: 0
+        transform: translateX(0)
+    50%
+        width: 100%
+        transform: translateX(0)
+    100%
+        transform: translateX(100%)
+        width: 100%
+        
+@media screen and (max-width: 680px)
+    [class*="menu-"]
+        h2
+            font:
+                size: 26px
+        .sectionTitle
+            flex-direction: column
+            .title
+                margin: 0
+                padding: 5px 0
+            .headline
+                background: red
+        .bottomtitle
+            font:
+                size: 18px

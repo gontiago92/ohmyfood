@@ -66,14 +66,266 @@ header .logo {
           transform: scale(1.3);
 }
 
-.container .menus h2 {
+.menu {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu h2 {
   margin: 20px 0;
   text-align: center;
 }
 
-.container .menus img {
-  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+.menu [class*="menu-"] {
+  margin: 0;
+  padding: 40px;
+}
+
+.menu [class*="menu-"] section {
+  margin: 40px 0;
+}
+
+.menu [class*="menu-"] .sectionTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu [class*="menu-"] .sectionTitle .title {
+  margin: 0 60px;
+}
+
+.menu [class*="menu-"] .sectionTitle .headline {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 4px;
+  border-radius: 4px;
+  background: #000;
+}
+
+.menu [class*="menu-"] .sectionTitle .headline:first-child {
+  margin-right: 0;
+}
+
+.menu [class*="menu-"] .sectionTitle .headline:last-child {
+  margin-left: 0;
+}
+
+.menu [class*="menu-"] .sectionTitle div.title {
+  width: 100%;
+  text-align: center;
+}
+
+.menu [class*="menu-"] .sectionTitle div.title h3 {
+  margin: 0;
+  padding-bottom: 4px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu [class*="menu-"] .sectionTitle div.title h3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  width: 0;
+  height: 2px;
+  background: #000;
+}
+
+.menu [class*="menu-"] .sectionTitle div.title h3:hover::before {
+  -webkit-animation: headline 2s infinite;
+          animation: headline 2s infinite;
+}
+
+.menu [class*="menu-"] p {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-style: italic;
+}
+
+.menu .menu-1 {
+  background: #FCDFDB;
+}
+
+.menu .menu-1 .note i {
+  display: block;
+}
+
+.menu .menu-1 i {
+  background: linear-gradient(30deg, #F04E5F 0%, #F6916A 70%);
+  font-size: 100px;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.menu .menu-1 .bottomtitle {
+  text-align: center;
+}
+
+.menu .menu-1 .bottomtitle i {
+  margin-right: 20px;
+  vertical-align: middle;
+  font-size: 50px;
+}
+
+.menu .menu-2 {
+  background: #FFF5FE;
+}
+
+.menu .menu-2 h2 {
+  font-size: 50px;
+  background-image: linear-gradient(45deg, #8F5BFE, #E38913);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.menu .menu-2 #seMettreEnAppetit {
+  color: #E38913;
+}
+
+.menu .menu-2 #seMettreEnAppetit .headline {
+  background: #E38913;
+}
+
+.menu .menu-2 #plaisirPapilles {
+  color: #A56799;
+}
+
+.menu .menu-2 #plaisirPapilles .headline {
+  background: #A56799;
+}
+
+.menu .menu-2 #gourmandisesSucrees {
+  color: #8F5BFE;
+}
+
+.menu .menu-2 #gourmandisesSucrees .headline {
+  background: #8F5BFE;
+}
+
+.menu .menu-2 .sectionTitle .headline {
+  background: red;
+}
+
+.menu .menu-3 {
+  background: #F9F9F9;
+}
+
+.menu .menu-3 h2 {
+  font-size: 50px;
+  font-style: italic;
+  background-image: linear-gradient(45deg, #001ED9, #0887FB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.menu .menu-3 .sectionTitle:first-child .headline {
+  background: blue;
+}
+
+.menu .menu-4 {
+  background: #FDFFFD;
+}
+
+.menu .menu-4 h2 {
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 500;
+  background-image: linear-gradient(45deg, #3D923A, #BCFD7E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.menu .menu-4 .sectionTitle .headline:first-child {
+  background-image: linear-gradient(45deg, #3D923A, #BCFD7E);
+}
+
+.menu .menu-4 .sectionTitle .headline:last-child {
+  background-image: linear-gradient(-45deg, #3D923A, #BCFD7E);
+}
+
+@-webkit-keyframes headline {
+  0% {
+    width: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 100%;
+  }
+}
+
+@keyframes headline {
+  0% {
+    width: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  [class*="menu-"] h2 {
+    font-size: 26px;
+  }
+  [class*="menu-"] .sectionTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  [class*="menu-"] .sectionTitle .title {
+    margin: 0;
+    padding: 5px 0;
+  }
+  [class*="menu-"] .sectionTitle .headline {
+    background: red;
+  }
+  [class*="menu-"] .bottomtitle {
+    font-size: 18px;
+  }
 }
 
 footer {
